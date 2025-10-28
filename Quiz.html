@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Reading Challenget</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- start header -->
+    <header class="header">
+        <div class="header_title">
+            <div>
+                <h1>Reading Challenge</h1>
+            </div>
+        </div>
+        <nav class="header_nav">
+            <div><a href="index.html">Home</a></div>
+            <div><a href="https://www.codecademy.com/catalog/subject/web-development">Learn More</a></div>
+            <div><a href="#contact">Contact</a></div>
+        </nav>
+    </header>
+    <!-- end header -->
+    <!-- start main -->
+    <main class="main_quiz">
+        <!-- section one -->
+        <section class="info_section">
+            <div class="info_title">
+                <h3>Your information</h3>
+            </div>
+            <form class="info_form">
+                <label for="Fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <label for="Lname">Last Name</label>
+                <input type="text" id="lname" name="Lastname" placeholder="Your last name..">
+                <label for="Age">Age</label>
+                <input type="number" id="Age" name="thegr" placeholder="Your age">
+                <label for="Pnumber">Phone Number</label>
+                <input type="tel" id="Pnumber" name="Phonenumber" placeholder="Your phone number..">
+                <label for="gender">Gender</label>
+                <select class="form-select" id="gender" required>
+                    <option selected disabled>Choose...</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                <input type="submit" value="Submit">
+            </form>
+            <div>
+                <p>Please enter all information correctly.</p>
+            </div>
+            <div>
+                <p>Information saved successfully</p>
+            </div>
+        </section>
+
+        <!-- section two -->
+        <section class="quiz_section">
+            <div class="quiz_info">
+                <h3>Information about the Quiz</h3>
+                <p>
+                    This quiz contains 10 questions. Each question has four choices, but only one is correct. At the end
+                    of the quiz, your score will be calculated: if you get more than 5 correct answers, you pass; if you
+                    get less than 5, you fail. Good luck and do your best!"
+                </p>
+                <input type="button" id="start_quiz">
+            </div>
+            <form class="quiz_form">
+                <!-- qustion 1 -->
+                <div class="qustion" id="q1">
+                    <p class="q-text">1. What is the function of HTML?</p>
+                    <div>
+                        <label>
+                            <input type="radio" name="q1" value="A">
+                            <p>Adding colors and fonts to the page</p>
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="B" data-correct="true">
+                            <p>Creating the structure and content of the page </p>
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="C">
+                            <p>Adding interaction and animations</p>
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="D">
+                            <p>Running databases</p>
+                        </label>
+                    </div>
+                </div>
+                <!-- qustion 2 -->
+                <div class="qustion" id="q2">
+                    <p class="q-text">2. Which tag is used to create a link?</p>
+                    <div>
+                        <label>
+                            <input type="radio" name="q2" value="A">
+                            <p> link </p>
+                        </label>
+                        <label>
+                            <input type="radio" name="q2" value="B">
+                            <p>p</p>
+                        </label>
+                        <label>
+                            <input type="radio" name="q2" value="C" data-correct="true">
+                            <p>a</p>
+                        </label>
+                        <label>
+                            <input type="radio" name="q2" value="D">
+                            <p>div</p>
+                        </label>
+                    </div>
+                </div>
+                <!-- qustion 3 -->
+                <div class="qustion" id="q3">
+                    <p class="q-text">3. Which tag is used to create a paragraph? </p>
+                    <div>
+                        <label>
+                            <input type="radio" name="q3" value="A">
+                            <p>h1</p>
+                        </label>
+                        <label>
+                            <input type="radio" name="q3" value="B">
+                            <p>span</p>
+                        </label>
+                        <label>
+                            <input type="radio" name="q3" value="C" data-correct="true">
+                            <p>p</p>
+                        </label>
+                        <label>
+                            <input type="radio" name="q3" value="D">
+                            <p>ul</p>
+                        </label>
+                    </div>
+                </div>
+                <!-- qustion 4 -->
+                <div class="qustion" id="q1">
+                    <p class="q-text">4. What is the function of CSS? </p>
+                    <div>
+                        <label>
+                            <input type="radio" name="q4" value="A">
+                            <p>Controlling the structure of the page </p>
+                        </label>
+                        <label>
+                            <input type="radio" name="q4" value="B">
+                            <p>Running calculations and logic</p>
+                        </label>
+                        <label>
+                            <input type="radio" name="q4" value="C">
+                            <p>Creating HTML files</p>
+                        </label>
+                        <label>
+                            <input type="radio" name="q4" value="D" data-correct="true">
+                            <p>Adding colors, style, and design </p>
+                        </label>
+                    </div>
+                </div>
+                <!-- qustion 5 -->
+                <div class="qustion" id="q1">
+                    <p class="q-text">5. Which of the following is used to change the text color in CSS?</p>
+                    <div>
+                        <label>
+                            <input type="radio" name="q5" value="A">
+                            <p>font-style</p>
+                        </label>
+                        <label>
+                            <input type="radio" name="q5" value="B">
+                            <p>background-color</p>
+                        </label>
+                        <label>
+                            <input type="radio" name="q5" value="C" data-correct="true">
+                            <p>color</p>
+                        </label>
+                        <label>
+                            <input type="radio" name="q5" value="D">
+                            <p>text-decoration</p>
+                        </label>
+                    </div>
+                </div>
+                <!-- qustion 6 -->
+                <div class="qustion" id="q1">
+                    <p class="q-text">6. What is the difference between HTML and JavaScript?</p>
+                    <div>
+                        <label>
+                            <input type="radio" name="q6" value="A" data-correct="true">
+                            <p>HTML is for structure, JavaScript is for interaction </p>
+                        </label>
+                        <label>
+                            <input type="radio" name="q6" value="B">
+                            <p>HTML adds colors, JavaScript creates structure</p>
+                        </label>
+                        <label>
+                            <input type="radio" name="q6" value="C">
+                            <p>HTML is for storage, JavaScript is for links</p>
+                        </label>
+                        <label>
+                            <input type="radio" name="q6" value="D">
+                            <p>There is no difference</p>
+                        </label>
+                    </div>
+                </div>
+                <!-- qustion 7 -->
+                <div class="qustion" id="q7">
+                    <p class="q-text">Which of the following is used to change the content of an element using
+                        JavaScript?</p>
+                    <div>
+                        <label>
+                            <input type="radio" name="q7" value="A">
+                            <p>document.style.color</p>
+                        </label>
+                        <label>
+                            <input type="radio" name="q7" value="B">
+                            <p>document.write()</p>
+                        </label>
+                        <label>
+                            <input type="radio" name="q7" value="C">
+                            <p>window.alert()</p>
+                        </label>
+                        <label>
+                            <input type="radio" name="q7" value="D" data-correct="true">
+                            <p>document.getElementById("id").innerHTML </p>
+                        </label>
+                    </div>
+                </div>
+                <!-- qustion 8 -->
+                <div class="qustion" id="q8">
+                    <p class="q-text">8. Which of the following is used to add a comment in HTML?</p>
+                    <div>
+                        <label>
+                            <input type="radio" name="q8" value="A">
+                            <p>/* comment */</p>
+                        </label>
+                        <label>
+                            <input type="radio" name="q8" value="B">
+                            <p>// comment</p>
+                        </label>
+                        <label>
+                            <input type="radio" name="q8" value="C" data-correct="true">
+                            <p>&lt;!--comment --&gt;</p>
+                        </label>
+                        <label>
+                            <input type="radio" name="q8" value="D">
+                            <p># comment</p>
+                        </label>
+                    </div>
+                </div>
+                <!-- qustion 9 -->
+                <div class="qustion" id="q9">
+                    <p class="q-text">9. Which of the following is used to make an HTML page interactive?</p>
+                    <div>
+                        <label>
+                            <input type="radio" name="q9" value="A">
+                            <p>CSS</p>
+                        </label>
+                        <label>
+                            <input type="radio" name="q9" value="B">
+                            <p>HTML</p>
+                        </label>
+                        <label>
+                            <input type="radio" name="q9" value="C" data-correct="true">
+                            <p>JavaScript</p>
+                        </label>
+                        <label>
+                            <input type="radio" name="q9" value="D">
+                            <p>XML</p>
+                        </label>
+                    </div>
+                </div>
+                <!-- qustion 10 -->
+                <div class="qustion" id="q10">
+                    <p class="q-text">10. Which of the following is correct about CSS?</p>
+                    <div>
+                        <label>
+                            <input type="radio" name="q10" value="A">
+                            <p>It cannot be changed after the page is created</p>
+                        </label>
+                        <label>
+                            <input type="radio" name="q10" value="B" data-correct="true">
+                            <p>It can be applied to HTML elements to change their appearance </p>
+                        </label>
+                        <label>
+                            <input type="radio" name="q10" value="C">
+                            <p>It never affects the page</p>
+                        </label>
+                        <label>
+                            <input type="radio" name="q10" value="D">
+                            <p>It is used only for creating tables</p>
+                        </label>
+                    </div>
+                </div>
+                <!-- ---------------------- -->
+            </form>
+            <div>
+                <button>Next →</button>
+            </div>
+        </section>
+        <section class="display_info">
+
+        </section>
+    </main>
+    <!-- end main -->
+    <!-- start footer  -->
+    <footer class="footer" id="contact">
+        <div class="footer_continer">
+            <div class="footer_about">
+                <h3>About Reading Challenge</h3>
+                <p>Reading Challenge helps you improve your comprehension skills. Read articles, take quizzes, and see
+                    how much you understand. Learn, test, and grow every day!
+                </p>
+            </div>
+
+            <div class="footer_support">
+                <h3>Support</h3>
+                <nav>
+                    <a href="#">FAQ</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Report a Problemt</a>
+                    <a href="#">Privacy Policy</a>
+                </nav>
+            </div>
+            <div class="footer_social">
+                <h3>Join the Community</h3>
+                <a href="#"><img src="IMG/icons8-facebook-50.png" alt="Facebook"></a>
+                <a href="#"><img src="IMG/icons8-instagram-50.png" alt="Instagram"></a>
+                <a href="#"><img src="IMG/icons8-x-50.png" alt="x"></a>
+                <a href="#"><img src="IMG/icons8-youtube-squared-50.png" alt="youtube"></a>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <p>© 2025 Reading Challenge — Built to learn front end</p>
+        </div>
+    </footer>
+    <!-- end footer -->
+</body>
+
+</html>

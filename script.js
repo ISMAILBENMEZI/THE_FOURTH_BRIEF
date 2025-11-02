@@ -3,6 +3,7 @@ const form = document.getElementById("info_form");
 const infoSection = document.getElementById("info_section");
 const quizInfo = document.getElementById("quiz_info");
 const quizForm = document.getElementById("quiz_form");
+const mySection = document.getElementById("display_info");
 const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const regex = /^\d{10}$/;
 
@@ -166,6 +167,7 @@ startQuiz.addEventListener("click", function () {
 
 const errorMsg = document.getElementById("error_msg");
 let result = 0;
+let wrong = 0;
 
 function showQuestion() {
   let question = questionAnswers[currentQuestion];
@@ -210,7 +212,7 @@ function startTimer() {
 quizForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  clearInterval(timer); 
+  clearInterval(timer);
   let selected = document.querySelector('input[name = "answer"]:checked');
 
   if (!selected) {
@@ -229,6 +231,7 @@ quizForm.addEventListener("submit", function (e) {
     document.body.style.backgroundColor = "rgba(0, 255, 0, 0.48)";
   } else {
     document.body.style.backgroundColor = "rgba(255, 0, 0, 0.48)";
+    wrong++;
   }
 
   currentQuestion = currentQuestion + 1;
@@ -243,8 +246,25 @@ quizForm.addEventListener("submit", function (e) {
       showQuestion();
       startTimer();
     } else {
-      console.log(result);
-      console.log(countDownResult);
+      quizForm.style.display = "none";
+      mySection.style.display = "flex";
+      if (result >= 5) {
+        mySection.innerHTML = `
+                  <h2>Quiz Results</h2>
+                  <p>Correct answers: ${result}</p>
+                  <p>Wrong answers: ${wrong}</p>
+                  <p>Unanswered questions: ${countDownResult}</p>
+                   <h3 class = "passed">You passed</h3>
+                       `;
+      } else {
+        mySection.innerHTML = `
+                  <h2>Quiz Results</h2>
+                  <p>Correct answers: ${result}</p>
+                  <p>Wrong answers: ${wrong}</p>
+                  <p>Unanswered questions: ${countDownResult}</p>
+                   <h3 class = "failed">You failed</h3>
+                       `;
+      }
     }
   }, 600);
 });

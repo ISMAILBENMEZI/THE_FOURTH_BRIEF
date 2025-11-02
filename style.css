@@ -221,8 +221,7 @@ body {
   padding: 80px;
   color: rgba(0, 255, 0, 0.351);
 }
-#count_down
-{
+#count_down {
   color: #fff;
   background-color: #000;
   padding: 10px 15px;
@@ -244,8 +243,7 @@ body {
   text-align: center;
 }
 
-#question_text
-{
+#question_text {
   background: #7700ff;
   padding: 50px;
   border-radius: 15px;
@@ -295,8 +293,7 @@ body {
   transform: translateY(-5px);
   color: #ffffff;
 }
-.error_msg
-{
+.error_msg {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -304,8 +301,7 @@ body {
   top: 0;
   left: 0;
 }
-.error_msg p 
-{
+.error_msg p {
   background: rgb(255, 255, 255);
   color: red;
   font-size: 1rem;
@@ -314,6 +310,47 @@ body {
   display: none;
 }
 /* ----------------------------------- */
+#display_info {
+  display: none;
+  background: white;
+  padding: 100px 0;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgb(0, 0, 0);
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#display_info h2 {
+  color: #ff00f2;
+  margin-bottom: 15px;
+  font-size: 2.5rem;
+}
+
+#display_info p {
+  color: #4c4c4c;
+  font-size: 1.5rem;
+  margin: 8px 0;
+}
+
+#display_info h3 {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#display_info .passed
+{
+  color: rgb(0, 255, 0);
+}
+
+#display_info .failed
+{
+  color: rgb(255, 0, 0);
+}
 
 /* ----------------------------------- */
 /* end main */
